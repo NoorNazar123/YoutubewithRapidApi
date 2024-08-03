@@ -7,10 +7,10 @@ import { SiYoutubegaming } from "react-icons/si";
 import { RiLiveFill } from "react-icons/ri";
 import { MdSportsScore } from "react-icons/md";
 import { IoCafeSharp } from "react-icons/io5";
+ 
+// const selectedCategory = "New";
 
-const selectedCategory = "New";
-
-const Sidebar = () => {
+const Sidebar = ({ selectedCategory, setSelectedCategory }) => { 
   const feedItem = [
     {
       id: 1,
@@ -78,7 +78,7 @@ const Sidebar = () => {
       iconDes: "Feshion",
     },
     {
-      id: 13,
+      id: 14,
       icon: <FaHandHoldingHeart />,
       iconDes: "Beauty",
     },
@@ -87,25 +87,26 @@ const Sidebar = () => {
   return (
     <div>
       {feedItem &&
-        feedItem.map((item) => (
+        feedItem.map((item) => ( 
           <button
             key={item.id}
-            className="text-white flex gap-4  items-center my-4 hover:bg-red-600 duration-500 rounded-[24px] w-[150px] md:w-[200px] px-4 py-2"
+            onClick={() => {
+              setSelectedCategory(item.iconDes) 
+            }}
+            className="text-white flex gap-4  items-center m-4 hover:bg-red-600 duration-500 rounded-[24px] w-[150px] md:w-[160px] px-4 py-2"
             style={{
               background: item.iconDes === selectedCategory && "#fc1503",
-              
-              
             }}
           >
             <span
               style={{
-                color: item.iconDes === selectedCategory? "#fff" : "#fc1503", 
+                color: item.iconDes === selectedCategory ? "#fff" : "#fc1503",
               }}
               className="text-2xl"
             >
               {item.icon}
             </span>
-            <p className="text-[16px] leading-[23px] font-[400]">
+            <p className="text-[16px] leading-[23px] font-[400] ">
               {item.iconDes}
             </p>
           </button>
