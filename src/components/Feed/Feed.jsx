@@ -23,18 +23,18 @@ const Feed = () => {
   } 
   return (
     <div className="md:flex bg-black min-h-screen text-white ">
-      <div className="w-[100%] md:w-[20%] flex items-center flex-col gap-8 border-r border-gray-500">
-        <div>
+      <div className="w-[100%] md:w-[20%] flex items-center flex-col gap-8 md:gap-2 border-r border-gray-500">
+        <div >
           <Sidebar
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
           />
         </div>
-        <h2 className="text-[14px] leading-[16px] font-[400] px-4 text-center my-4">
+        <h2 className="text-[14px] leading-[16px] font-[400] px-4 text-center my-4 hidden md:block">
           CopyWrite@2024 <br /> Noor e Nazar
         </h2>
       </div>
-      <div className="px-4">
+      <div className="w-full md:w-[80%] px-4">
         <h1 className="text-[45px] leading-[45px] font-[900]">
           {selectedCategory}
           <span className="text-red-600 mx-4">Video</span>

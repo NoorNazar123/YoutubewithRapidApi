@@ -25,13 +25,7 @@ const VideoCard = ({
           {snippet?.title.slice(0, 50) || "demoTitle"}
         </p>
       </Link>
-      <Link
-        to={
-          snippet?.channelId
-            ? `/chennel/${snippet?.channelId}`
-            : "demochannelUrl"
-        }
-      >
+      <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl} >
         <span className="text-[12px] px-2  text-gray-400 ">
           {snippet?.channelTitle || "demochannelId"}
         </span>

@@ -7,10 +7,10 @@ import { SiYoutubegaming } from "react-icons/si";
 import { RiLiveFill } from "react-icons/ri";
 import { MdSportsScore } from "react-icons/md";
 import { IoCafeSharp } from "react-icons/io5";
- 
+
 // const selectedCategory = "New";
 
-const Sidebar = ({ selectedCategory, setSelectedCategory }) => { 
+const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
   const feedItem = [
     {
       id: 1,
@@ -85,13 +85,13 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
   ];
 
   return (
-    <div>
+    <div className="">
       {feedItem &&
-        feedItem.map((item) => ( 
+        feedItem.map((item) => (
           <button
             key={item.id}
             onClick={() => {
-              setSelectedCategory(item.iconDes) 
+              setSelectedCategory(item.iconDes);
             }}
             className="text-white flex gap-4  items-center m-4 hover:bg-red-600 duration-500 rounded-[24px] w-[150px] md:w-[160px] px-4 py-2"
             style={{
