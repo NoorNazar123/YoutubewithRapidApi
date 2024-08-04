@@ -85,7 +85,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
   ];
 
   return (
-    <div className="">
+    <div className="hidden md:block"> 
       {feedItem &&
         feedItem.map((item) => (
           <button
